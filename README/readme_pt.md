@@ -1,7 +1,7 @@
 # Meu Projeto
 
 Idiomas:
-- [English](README.md)
+- [English](../README.md)
 - Português (atual)
 - [Español](README_ES.md)
 
