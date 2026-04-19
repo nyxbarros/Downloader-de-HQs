@@ -2,5 +2,5 @@
 
 Languages:
 - English (current)
-- [Português](README.pt-BR.md)
-- [Español](README.es.md)
+- [Português](readme_pt.md)
+- [Español](readme_es.md)

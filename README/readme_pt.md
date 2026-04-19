@@ -1,9 +1,9 @@
 # Meu Projeto
 
 Idiomas:
-- [English](README.md)
+- [English](readme.md)
 - Português (atual)
-- [Español](README.es.md)
+- [Español](readme_es.md)
 
 ## SOBRE
 
