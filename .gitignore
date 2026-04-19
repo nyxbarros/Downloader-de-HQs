@@ -1,0 +1,6 @@
+__pycache__/
+.vscode/
+downloads/
+dados.json
+pendencias.md
+teste*
