@@ -16,6 +16,8 @@ class GerarPdf:
 
     def baixar_imagens(self):
         # baixar as imagens
+        import os
+        print("Link acessado: "+self.url)
         links = Controller.controller(self.url)
         for i, v in enumerate(links):
             os.makedirs(self.local_para_salvar, exist_ok=True)  # cria a pasta se não existir

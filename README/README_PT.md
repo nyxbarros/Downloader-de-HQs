@@ -87,8 +87,5 @@ comando de ajuda: `python3 . -h`
 3. preencher o segundo e demais inputs com as URLs dos capítulos
 4. enviar um input vazio para prosseguir o processo
 
-## FONTES JÁ PROGRAMADAS
-* https://tapas.io/
-
 ## COMO ADICIONAR OUTRAS PLATAFORMAS
 Quem faz toda a gerencia de quais sites estão cadastrados ou não é o Controller.py, para adicionar algum site, precisa ir na função Controller.controller(), adicionar o site lá e criar uma função que extraia apenas os links das imagens da história que está no html retornado e que retorne a lista de urls

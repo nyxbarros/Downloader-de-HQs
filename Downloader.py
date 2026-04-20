@@ -1,5 +1,8 @@
 from GerarPdf import GerarPdf
+from Utils import Lista
 from ValidadorDeJson import ValidadorDeJson
+from pathlib import Path
+import os
 import requests
 
 class Downloader:
@@ -21,10 +24,16 @@ class Downloader:
     def pelo_json(dados):
         json_valido = ValidadorDeJson.validar(dados)
         if json_valido == True:
-            for historia in dados: 
+            for historia in dados:
+                historia["nome"] = historia["nome"].strip()
+                pasta = Path('download/'+historia["nome"])
+                if pasta.is_dir():
+                    comeco = len(Lista(os.listdir(pasta)).filter(lambda x: x.lower().endswith(".pdf")))
+                else:
+                    comeco = 0
                 tam = len(str(len(historia['urls'])))
                 for i,v in enumerate(historia['urls']):
-                    pdf = GerarPdf(f'{historia["nome"]}/{historia["nome"]} - cap {(i+1):0{tam}}', v)
+                    pdf = GerarPdf(f'{historia["nome"]}/{historia["nome"]} - cap {(i+1+comeco):0{tam}}', v)
                     pdf.baixar_imagens()
                     pdf.imgParaPdf(True)
         else:
