@@ -35,7 +35,7 @@ class Controller:
     def baixar_yurionair_top(url):
         # acessar HTML
         resposta = requests.get(url)
-        html = Lista(str(BeautifulSoup(resposta.text, "html.parser")).split('\n')).map(lambda x: x.strip()).filter(lambda x: 'class="wp-manga-chapter-img"' in x).map(lambda x: x.replace('src=" https', 'src="https')).map(lambda x: x.split(' '))
+        html = Lista(str(BeautifulSoup(resposta.text, "html.parser")).split('\n')).map(lambda x: x.strip()).filter(lambda x: 'class="wp-manga-chapter-img"' in x).map(lambda x: x.replace('src=" http', 'src="https')).map(lambda x: x.split(' '))
 
 
         # extrair links

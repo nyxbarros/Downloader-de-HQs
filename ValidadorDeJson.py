@@ -1,6 +1,3 @@
-from urllib.request import urlopen
-import requests
-
 class ValidadorDeJson:
     def validar(lista_json):
         if type(lista_json) is not list:
