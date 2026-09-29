@@ -9,7 +9,6 @@ def main():
         Downloader.pelo_input()
     elif "-h" in sys.argv or "--help" in sys.argv:
         parser = argparse.ArgumentParser()
-        parser.add_argument(" ", help="Usar o arquivo dados.json com input")
         parser.add_argument("JSON", help="Usar o arquivo dados.json com input")
         parser.add_argument("<local para salvar>", help="Pasta onde será salvo os arquivos baixados")
         parser.add_argument("<urls das HQs>", help="URLs das HQs que serão baixadas")
